@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ix="http://www.xbrl.org/2013/inlineXBRL"
+      xmlns:esrs="http://www.esrs.eu/esrs/2023-01-01">
+  <head>
+    <title>CSRD XHTML Valid Report</title>
+    <link rel="schemaRef" href="https://www.esrs.eu/esrs/2023-01-01/esrs-cor.xsd" />
+  </head>
+  <body>
+    <h1>Annual Sustainability Report 2024</h1>
+
+    <ix:header>
+      <ix:identifier scheme="http://www.example.com">ExampleCompany</ix:identifier>
+      <ix:period>
+        <ix:startDate>2024-01-01</ix:startDate>
+        <ix:endDate>2024-12-31</ix:endDate>
+      </ix:period>
+    </ix:header>
+
+    <div>
+      <h2>Sustainability Strategy</h2>
+      <ix:nonNumeric name="esrs:StrategySustainability">
+        Our strategy includes a 40% reduction in CO2 by 2030, backed by renewable energy investments.
+      </ix:nonNumeric>
+    </div>
+
+    <div>
+      <h2>Governance</h2>
+      <ix:nonNumeric name="esrs:SustainabilityGovernance">
+        Sustainability is overseen by a dedicated ESG committee chaired by the CFO.
+      </ix:nonNumeric>
+    </div>
+
+    <div>
+      <h2>GHG Emissions</h2>
+      <ix:nonFraction name="esrs:GHGScope1Emissions" contextRef="c1" decimals="0" unitRef="u1">12500</ix:nonFraction>
+      <ix:nonFraction name="esrs:GHGScope2Emissions" contextRef="c1" decimals="0" unitRef="u1">9700</ix:nonFraction>
+      <ix:nonFraction name="esrs:GHGScope3Emissions" contextRef="c1" decimals="0" unitRef="u1">58200</ix:nonFraction>
+    </div>
+  </body>
+</html>

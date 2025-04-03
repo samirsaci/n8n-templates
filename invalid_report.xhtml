@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ix="http://www.xbrl.org/2013/inlineXBRL"
+      xmlns:esrs="http://www.esrs.eu/esrs/2023-01-01">
+  <head>
+    <title>CSRD XHTML Incomplete Report</title>
+    <!-- Missing schemaRef -->
+  </head>
+  <body>
+    <h1>ESG Disclosure 2024</h1>
+
+    <!-- Missing ix:header block -->
+
+    <div>
+      <h2>Sustainability Strategy</h2>
+      <ix:nonNumeric name="esrs:StrategySustainability"></ix:nonNumeric> <!-- Empty tag -->
+    </div>
+
+    <!-- Missing governance section entirely -->
+
+    <div>
+      <h2>GHG Emissions</h2>
+      <!-- Only one KPI -->
+      <ix:nonFraction name="esrs:GHGScope1Emissions" contextRef="c1" decimals="0" unitRef="u1">14000</ix:nonFraction>
+    </div>
+
+    <div>
+      <h2>Duplicate Disclosure Test</h2>
+      <ix:nonNumeric name="esrs:StrategySustainability">
+        We aim to reduce emissions.
+      </ix:nonNumeric>
+      <ix:nonNumeric name="esrs:StrategySustainability">
+        We aim to reduce emissions.
+      </ix:nonNumeric>
+    </div>
+  </body>
+</html>
